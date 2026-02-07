@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Insights Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Business Insights Dashboard</h1>
+
+            <div class="header-actions">
+                <button id="darkModeToggle">🌙 Dark Mode</button>
+                <button onclick="toggleCharts()">👁 Toggle Charts</button>
+            </div>
+        </header>
+
+        <div class="charts-container">
+            <div class="chart-item" onclick="highlightCard(this)">
+                <div class="card-header">
+                    <h3>Monthly Sales</h3>
+                    <button onclick="downloadChart(barChart, event)">⬇</button>
+                </div>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="chart-item" onclick="highlightCard(this)">
+                <div class="card-header">
+                    <h3>Website Traffic</h3>
+                    <button onclick="downloadChart(lineChart, event)">⬇</button>
+                </div>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+            <div class="chart-item" onclick="highlightCard(this)">
+                <div class="card-header">
+                    <h3>User Device Distribution</h3>
+                    <button onclick="downloadChart(pieChart, event)">⬇</button>
+                </div>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

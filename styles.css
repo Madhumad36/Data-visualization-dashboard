@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #2d89ff, #0d47a1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+body.dark .dashboard-container {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-actions button {
+    margin-left: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.chart-item {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+body.dark .chart-item {
+    background: #2a2a2a;
+}
+
+.chart-item:hover {
+    transform: translateY(-5px);
+}
+
+.chart-item.active {
+    outline: 3px solid #2d89ff;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+}
